@@ -50,34 +50,22 @@
 </svelte:head>
 
 <!-- Nav -->
-<header class="fixed top-0 inset-x-0 z-50 border-b transition-colors duration-300" 
-	class:border-white/[0.04]={$theme === 'dark'}
-	class:border-black/[0.08]={$theme === 'light'}
-	class:bg-[#0a0a0a]/80={$theme === 'dark'}
-	class:bg-white/80={$theme === 'light'}
+<header class="fixed top-0 inset-x-0 z-50 border-b transition-colors duration-300 {$theme === 'dark' ? 'border-white/[0.04] bg-[#0a0a0a]/80' : 'border-black/[0.08] bg-white/80'}"
 	style="backdrop-filter: blur(12px);">
 	<div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-		<span class="font-mono text-sm font-medium tracking-tight transition-colors duration-300"
-			class:text-white={$theme === 'dark'}
-			class:text-gray-900={$theme === 'light'}>brogramming</span>
-		
+		<span class="font-mono text-sm font-medium tracking-tight transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">brogramming</span>
+
 		<div class="flex items-center gap-4">
 			<!-- Theme toggle -->
-			<button 
+			<button
 				on:click={theme.toggle}
 				class="theme-toggle"
 				aria-label="Toggle theme"
 			></button>
-			
+
 			<a
 				href="https://start.brogramming.io"
-				class="text-xs font-medium px-3 py-1.5 rounded-md transition-all duration-200"
-				class:text-[#4ade80]={$theme === 'dark'}
-				class:border-[#4ade80]/30={$theme === 'dark'}
-				class:hover:bg-[#4ade80]/10={$theme === 'dark'}
-				class:text-[#059669]={$theme === 'light'}
-				class:border-[#059669]/30={$theme === 'light'}
-				class:hover:bg-[#059669]/10={$theme === 'light'}
+				class="text-xs font-medium px-3 py-1.5 rounded-md transition-all duration-200 {$theme === 'dark' ? 'text-[#4ade80] border-[#4ade80]/30 hover:bg-[#4ade80]/10' : 'text-[#059669] border-[#059669]/30 hover:bg-[#059669]/10'}"
 				style="border: 1px solid;"
 			>
 				Start Brogramming →
@@ -101,58 +89,36 @@
 		</div>
 
 		<!-- Grid lines decoration -->
-		<div class="absolute inset-0 pointer-events-none transition-opacity duration-300"
-			class:opacity-[0.025]={$theme === 'dark'}
-			class:opacity-[0.04]={$theme === 'light'}
+		<div class="absolute inset-0 pointer-events-none transition-opacity duration-300 {$theme === 'dark' ? 'opacity-[0.025]' : 'opacity-[0.04]'}"
 			style="background-image: linear-gradient({$theme === 'dark' ? '#fff' : '#000'} 1px, transparent 1px), linear-gradient(90deg, {$theme === 'dark' ? '#fff' : '#000'} 1px, transparent 1px); background-size: 80px 80px;">
 		</div>
 
 		<div class="relative z-10 text-center max-w-3xl mx-auto">
 			<!-- eyebrow -->
-			<div class="inline-flex items-center gap-2 text-xs font-mono rounded-full px-3 py-1 mb-8 transition-all duration-300"
-				class:text-[#4ade80]/70={$theme === 'dark'}
-				class:bg-[#4ade80]/[0.04]={$theme === 'dark'}
-				class:text-[#059669]/70={$theme === 'light'}
-				class:bg-[#059669]/[0.08]={$theme === 'light'}>
-				<span class="w-1.5 h-1.5 rounded-full animate-pulse"
-					class:bg-[#4ade80]={$theme === 'dark'}
-					class:bg-[#059669]={$theme === 'light'}></span>
+			<div class="inline-flex items-center gap-2 text-xs font-mono rounded-full px-3 py-1 mb-8 transition-all duration-300 {$theme === 'dark' ? 'text-[#4ade80]/70 bg-[#4ade80]/[0.04]' : 'text-[#059669]/70 bg-[#059669]/[0.08]'}">
+				<span class="w-1.5 h-1.5 rounded-full animate-pulse {$theme === 'dark' ? 'bg-[#4ade80]' : 'bg-[#059669]'}"></span>
 				Real-time · AI-native · CRDT-powered
 			</div>
 
-			<h1 class="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-[1.05] mb-6 transition-colors duration-300"
-				class:text-white={$theme === 'dark'}
-				class:text-gray-900={$theme === 'light'}>
-				Brogrammers Brogramming <span class:text-[#4ade80]={$theme === 'dark'} class:text-[#059669]={$theme === 'light'}>Brogramming.</span>
+			<h1 class="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-[1.05] mb-6 transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">
+				Brogrammers Brogramming <span class="{$theme === 'dark' ? 'text-[#4ade80]' : 'text-[#059669]'}">Brogramming.</span>
 			</h1>
 
-			<p class="text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed transition-colors duration-300"
-				class:text-gray-400={$theme === 'dark'}
-				class:text-gray-600={$theme === 'light'}>
+			<p class="text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed transition-colors duration-300 {$theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}">
 				How much clearer could we be?
 			</p>
 
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-3">
 				<a
 					href="https://start.brogramming.io"
-					class="group inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-200"
-					class:bg-[#4ade80]={$theme === 'dark'}
-					class:text-black={$theme === 'dark'}
-					class:hover:bg-[#86efac]={$theme === 'dark'}
-					class:bg-[#059669]={$theme === 'light'}
-					class:text-white={$theme === 'light'}
-					class:hover:bg-[#047857]={$theme === 'light'}
+					class="group inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-200 {$theme === 'dark' ? 'bg-[#4ade80] text-black hover:bg-[#86efac]' : 'bg-[#059669] text-white hover:bg-[#047857]'}"
 				>
 					Start Brogramming
 					<span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
 				</a>
 				<a
 					href="#how-it-works"
-					class="text-sm px-4 py-3 transition-colors duration-200"
-					class:text-gray-500={$theme === 'dark'}
-					class:hover:text-gray-300={$theme === 'dark'}
-					class:text-gray-600={$theme === 'light'}
-					class:hover:text-gray-800={$theme === 'light'}
+					class="text-sm px-4 py-3 transition-colors duration-200 {$theme === 'dark' ? 'text-gray-500 hover:text-gray-300' : 'text-gray-600 hover:text-gray-800'}"
 				>
 					See how it works
 				</a>
@@ -161,41 +127,23 @@
 
 		<!-- Terminal mockup -->
 		<div class="relative z-10 mt-20 w-full max-w-2xl mx-auto">
-			<div class="rounded-xl border overflow-hidden shadow-2xl transition-all duration-300"
-				class:border-white/[0.06]={$theme === 'dark'}
-				class:bg-[#111111]/80={$theme === 'dark'}
-				class:shadow-black/60={$theme === 'dark'}
-				class:border-gray-300={$theme === 'light'}
-				class:bg-white/90={$theme === 'light'}
-				class:shadow-gray-900/20={$theme === 'light'}
+			<div class="rounded-xl border overflow-hidden shadow-2xl transition-all duration-300 {$theme === 'dark' ? 'border-white/[0.06] bg-[#111111]/80 shadow-black/60' : 'border-gray-300 bg-white/90 shadow-gray-900/20'}"
 				style="backdrop-filter: blur(12px);">
 				<!-- Title bar -->
-				<div class="flex items-center gap-1.5 px-4 py-3 border-b transition-all duration-300"
-					class:border-white/[0.05]={$theme === 'dark'}
-					class:bg-[#0d0d0d]={$theme === 'dark'}
-					class:border-gray-200={$theme === 'light'}
-					class:bg-gray-50={$theme === 'light'}>
+				<div class="flex items-center gap-1.5 px-4 py-3 border-b transition-all duration-300 {$theme === 'dark' ? 'border-white/[0.05] bg-[#0d0d0d]' : 'border-gray-200 bg-gray-50'}">
 					<div class="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"></div>
 					<div class="w-2.5 h-2.5 rounded-full bg-[#febc2e]"></div>
 					<div class="w-2.5 h-2.5 rounded-full bg-[#28c840]"></div>
-					<span class="ml-3 font-mono text-xs transition-colors duration-300"
-						class:text-gray-600={$theme === 'dark'}
-						class:text-gray-500={$theme === 'light'}>session://room-a3f9b2</span>
+					<span class="ml-3 font-mono text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">session://room-a3f9b2</span>
 					<div class="ml-auto flex items-center gap-2">
-						<span class="w-1.5 h-1.5 rounded-full"
-							class:bg-[#4ade80]={$theme === 'dark'}
-							class:bg-[#059669]={$theme === 'light'}></span>
-						<span class="font-mono text-xs transition-colors duration-300"
-							class:text-[#4ade80]/60={$theme === 'dark'}
-							class:text-[#059669]/60={$theme === 'light'}>3 connected</span>
+						<span class="w-1.5 h-1.5 rounded-full {$theme === 'dark' ? 'bg-[#4ade80]' : 'bg-[#059669]'}"></span>
+						<span class="font-mono text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]/60' : 'text-[#059669]/60'}">3 connected</span>
 					</div>
 				</div>
 				<!-- Code lines -->
 				<div class="px-5 py-5 font-mono text-xs sm:text-sm leading-7 text-left overflow-hidden">
 					<div class="flex gap-4">
-						<div class="select-none text-right w-4 shrink-0 leading-7 transition-colors duration-300"
-							class:text-gray-700={$theme === 'dark'}
-							class:text-gray-400={$theme === 'light'}>
+						<div class="select-none text-right w-4 shrink-0 leading-7 transition-colors duration-300 {$theme === 'dark' ? 'text-gray-700' : 'text-gray-400'}">
 							{#each [1,2,3,4,5,6,7] as n}
 								<div>{n}</div>
 							{/each}
@@ -221,28 +169,18 @@
 						</div>
 					</div>
 					<!-- Cursor indicators -->
-					<div class="mt-4 pt-4 border-t flex items-center gap-3 transition-colors duration-300"
-						class:border-white/[0.04]={$theme === 'dark'}
-						class:border-gray-200={$theme === 'light'}>
+					<div class="mt-4 pt-4 border-t flex items-center gap-3 transition-colors duration-300 {$theme === 'dark' ? 'border-white/[0.04]' : 'border-gray-200'}">
 						<div class="flex items-center gap-1.5">
-							<span class="w-2 h-2 rounded-full"
-								class:bg-[#4ade80]={$theme === 'dark'}
-								class:bg-[#059669]={$theme === 'light'}></span>
-							<span class="text-[10px] font-mono transition-colors duration-300"
-								class:text-gray-600={$theme === 'dark'}
-								class:text-gray-500={$theme === 'light'}>@alice · Claude</span>
+							<span class="w-2 h-2 rounded-full {$theme === 'dark' ? 'bg-[#4ade80]' : 'bg-[#059669]'}"></span>
+							<span class="text-[10px] font-mono transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">@alice · Claude</span>
 						</div>
 						<div class="flex items-center gap-1.5">
 							<span class="w-2 h-2 rounded-full bg-blue-400"></span>
-							<span class="text-[10px] font-mono transition-colors duration-300"
-								class:text-gray-600={$theme === 'dark'}
-								class:text-gray-500={$theme === 'light'}>@bob · GPT-4o</span>
+							<span class="text-[10px] font-mono transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">@bob · GPT-4o</span>
 						</div>
 						<div class="flex items-center gap-1.5">
 							<span class="w-2 h-2 rounded-full bg-violet-400"></span>
-							<span class="text-[10px] font-mono transition-colors duration-300"
-								class:text-gray-600={$theme === 'dark'}
-								class:text-gray-500={$theme === 'light'}>@carol · Gemini</span>
+							<span class="text-[10px] font-mono transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">@carol · Gemini</span>
 						</div>
 					</div>
 				</div>
@@ -254,43 +192,22 @@
 	<section id="how-it-works" class="py-28 px-6">
 		<div class="max-w-5xl mx-auto">
 			<div class="text-center mb-16">
-				<p class="font-mono text-xs mb-3 tracking-widest uppercase transition-colors duration-300"
-					class:text-[#4ade80]/60={$theme === 'dark'}
-					class:text-[#059669]/60={$theme === 'light'}>Process</p>
-				<h2 class="text-3xl sm:text-4xl font-semibold tracking-tight transition-colors duration-300"
-					class:text-white={$theme === 'dark'}
-					class:text-gray-900={$theme === 'light'}>How it works</h2>
+				<p class="font-mono text-xs mb-3 tracking-widest uppercase transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]/60' : 'text-[#059669]/60'}">Process</p>
+				<h2 class="text-3xl sm:text-4xl font-semibold tracking-tight transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">How it works</h2>
 			</div>
 
-			<div class="grid sm:grid-cols-3 gap-px rounded-2xl overflow-hidden border transition-all duration-300"
-				class:bg-white/[0.04]={$theme === 'dark'}
-				class:border-white/[0.04]={$theme === 'dark'}
-				class:bg-gray-200={$theme === 'light'}
-				class:border-gray-300={$theme === 'light'}>
+			<div class="grid sm:grid-cols-3 gap-px rounded-2xl overflow-hidden border transition-all duration-300 {$theme === 'dark' ? 'bg-white/[0.04] border-white/[0.04]' : 'bg-gray-200 border-gray-300'}">
 				{#each steps as step, i}
-					<div class="relative p-8 sm:p-10 group transition-all duration-300"
-						class:bg-[#0a0a0a]={$theme === 'dark'}
-						class:hover:bg-[#0e0e0e]={$theme === 'dark'}
-						class:bg-white={$theme === 'light'}
-						class:hover:bg-gray-50={$theme === 'light'}>
+					<div class="relative p-8 sm:p-10 group transition-all duration-300 {$theme === 'dark' ? 'bg-[#0a0a0a] hover:bg-[#0e0e0e]' : 'bg-white hover:bg-gray-50'}">
 						<!-- connector line -->
 						{#if i < steps.length - 1}
 							<div class="hidden sm:block absolute top-10 right-0 w-px h-8 translate-x-px transition-colors duration-300"
-								class:bg-gradient-to-b={$theme === 'dark'}
-								class:from-white/10={$theme === 'dark'}
-								class:to-transparent={$theme === 'dark'}
-								style={$theme === 'light' ? 'background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, transparent 100%);' : ''}>
+								style={$theme === 'dark' ? 'background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, transparent 100%);' : 'background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, transparent 100%);'}>
 							</div>
 						{/if}
-						<div class="font-mono text-xs mb-6 tracking-widest transition-colors duration-300"
-							class:text-[#4ade80]/40={$theme === 'dark'}
-							class:text-[#059669]/40={$theme === 'light'}>{step.number}</div>
-						<h3 class="text-base font-semibold mb-3 leading-snug transition-colors duration-300"
-							class:text-white={$theme === 'dark'}
-							class:text-gray-900={$theme === 'light'}>{step.title}</h3>
-						<p class="text-sm leading-relaxed transition-colors duration-300"
-							class:text-gray-500={$theme === 'dark'}
-							class:text-gray-600={$theme === 'light'}>{step.desc}</p>
+						<div class="font-mono text-xs mb-6 tracking-widest transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]/40' : 'text-[#059669]/40'}">{step.number}</div>
+						<h3 class="text-base font-semibold mb-3 leading-snug transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">{step.title}</h3>
+						<p class="text-sm leading-relaxed transition-colors duration-300 {$theme === 'dark' ? 'text-gray-500' : 'text-gray-600'}">{step.desc}</p>
 					</div>
 				{/each}
 			</div>
@@ -298,71 +215,37 @@
 	</section>
 
 	<!-- ─── Features ─── -->
-	<section id="features" class="py-28 px-6 border-t transition-colors duration-300"
-		class:border-white/[0.04]={$theme === 'dark'}
-		class:border-gray-200={$theme === 'light'}>
+	<section id="features" class="py-28 px-6 border-t transition-colors duration-300 {$theme === 'dark' ? 'border-white/[0.04]' : 'border-gray-200'}">
 		<div class="max-w-5xl mx-auto">
 			<div class="text-center mb-16">
-				<p class="font-mono text-xs mb-3 tracking-widest uppercase transition-colors duration-300"
-					class:text-[#4ade80]/60={$theme === 'dark'}
-					class:text-[#059669]/60={$theme === 'light'}>Under the hood</p>
-				<h2 class="text-3xl sm:text-4xl font-semibold tracking-tight transition-colors duration-300"
-					class:text-white={$theme === 'dark'}
-					class:text-gray-900={$theme === 'light'}>Built differently</h2>
+				<p class="font-mono text-xs mb-3 tracking-widest uppercase transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]/60' : 'text-[#059669]/60'}">Under the hood</p>
+				<h2 class="text-3xl sm:text-4xl font-semibold tracking-tight transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">Built differently</h2>
 			</div>
 
 			<div class="grid sm:grid-cols-3 gap-4">
 				{#each features as feature}
-					<div class="group relative rounded-xl border p-7 transition-all duration-300 overflow-hidden"
-						class:border-white/[0.06]={$theme === 'dark'}
-						class:bg-[#111111]={$theme === 'dark'}
-						class:hover:border-[#4ade80]/20={$theme === 'dark'}
-						class:hover:bg-[#111a13]={$theme === 'dark'}
-						class:border-gray-200={$theme === 'light'}
-						class:bg-white={$theme === 'light'}
-						class:hover:border-[#059669]/30={$theme === 'light'}
-						class:hover:bg-gray-50={$theme === 'light'}>
+					<div class="group relative rounded-xl border p-7 transition-all duration-300 overflow-hidden {$theme === 'dark' ? 'border-white/[0.06] bg-[#111111] hover:border-[#4ade80]/20 hover:bg-[#111a13]' : 'border-gray-200 bg-white hover:border-[#059669]/30 hover:bg-gray-50'}">
 						<!-- glow on hover -->
 						<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
 							style="background: radial-gradient(ellipse 80% 50% at 50% 0%, {$theme === 'dark' ? '#4ade8008' : '#05966908'} 0%, transparent 70%);">
 						</div>
 
 						<!-- glass shimmer top edge -->
-						<div class="absolute top-0 inset-x-0 h-px transition-colors duration-300"
-							class:bg-gradient-to-r={$theme === 'dark'}
-							class:from-transparent={$theme === 'dark'}
-							class:via-white/[0.08]={$theme === 'dark'}
-							class:to-transparent={$theme === 'dark'}
-							style={$theme === 'light' ? 'background: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.06) 50%, transparent 100%);' : ''}>
+						<div class="absolute top-0 inset-x-0 h-px"
+							style={$theme === 'dark' ? 'background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.08) 50%, transparent 100%);' : 'background: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.06) 50%, transparent 100%);'}>
 						</div>
 
 						<div class="relative">
-							<div class="w-9 h-9 rounded-lg border flex items-center justify-center mb-5 transition-all duration-300"
-								class:bg-[#4ade80]/10={$theme === 'dark'}
-								class:border-[#4ade80]/20={$theme === 'dark'}
-								class:text-[#4ade80]={$theme === 'dark'}
-								class:bg-[#059669]/10={$theme === 'light'}
-								class:border-[#059669]/30={$theme === 'light'}
-								class:text-[#059669]={$theme === 'light'}>
+							<div class="w-9 h-9 rounded-lg border flex items-center justify-center mb-5 transition-all duration-300 {$theme === 'dark' ? 'bg-[#4ade80]/10 border-[#4ade80]/20 text-[#4ade80]' : 'bg-[#059669]/10 border-[#059669]/30 text-[#059669]'}">
 								{@html feature.icon}
 							</div>
 
 							<div class="flex items-start gap-2 mb-2 flex-wrap">
-								<h3 class="text-sm font-semibold transition-colors duration-300"
-									class:text-white={$theme === 'dark'}
-									class:text-gray-900={$theme === 'light'}>{feature.title}</h3>
-								<span class="font-mono text-[10px] border rounded-full px-2 py-0.5 transition-all duration-300"
-									class:text-[#4ade80]/60={$theme === 'dark'}
-									class:border-[#4ade80]/20={$theme === 'dark'}
-									class:bg-[#4ade80]/[0.04]={$theme === 'dark'}
-									class:text-[#059669]/60={$theme === 'light'}
-									class:border-[#059669]/30={$theme === 'light'}
-									class:bg-[#059669]/[0.08]={$theme === 'light'}>{feature.badge}</span>
+								<h3 class="text-sm font-semibold transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">{feature.title}</h3>
+								<span class="font-mono text-[10px] border rounded-full px-2 py-0.5 transition-all duration-300 {$theme === 'dark' ? 'text-[#4ade80]/60 border-[#4ade80]/20 bg-[#4ade80]/[0.04]' : 'text-[#059669]/60 border-[#059669]/30 bg-[#059669]/[0.08]'}">{feature.badge}</span>
 							</div>
 
-							<p class="text-sm leading-relaxed transition-colors duration-300"
-								class:text-gray-500={$theme === 'dark'}
-								class:text-gray-600={$theme === 'light'}>{feature.desc}</p>
+							<p class="text-sm leading-relaxed transition-colors duration-300 {$theme === 'dark' ? 'text-gray-500' : 'text-gray-600'}">{feature.desc}</p>
 						</div>
 					</div>
 				{/each}
@@ -371,52 +254,28 @@
 	</section>
 
 	<!-- ─── CTA strip ─── -->
-	<section class="py-28 px-6 border-t transition-colors duration-300"
-		class:border-white/[0.04]={$theme === 'dark'}
-		class:border-gray-200={$theme === 'light'}>
+	<section class="py-28 px-6 border-t transition-colors duration-300 {$theme === 'dark' ? 'border-white/[0.04]' : 'border-gray-200'}">
 		<div class="max-w-2xl mx-auto text-center">
-			<div class="relative rounded-2xl border p-12 sm:p-16 overflow-hidden transition-all duration-300"
-				class:border-white/[0.06]={$theme === 'dark'}
-				class:bg-[#111111]={$theme === 'dark'}
-				class:border-gray-200={$theme === 'light'}
-				class:bg-white={$theme === 'light'}>
+			<div class="relative rounded-2xl border p-12 sm:p-16 overflow-hidden transition-all duration-300 {$theme === 'dark' ? 'border-white/[0.06] bg-[#111111]' : 'border-gray-200 bg-white'}">
 				<!-- Background glow -->
 				<div class="absolute inset-0 pointer-events-none">
-					<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] rounded-full blur-[80px] transition-colors duration-300"
-						class:bg-[#4ade80]/[0.05]={$theme === 'dark'}
-						class:bg-[#059669]/[0.08]={$theme === 'light'}></div>
+					<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] rounded-full blur-[80px] transition-colors duration-300 {$theme === 'dark' ? 'bg-[#4ade80]/[0.05]' : 'bg-[#059669]/[0.08]'}"></div>
 				</div>
-				<div class="absolute top-0 inset-x-0 h-px transition-colors duration-300"
-					class:bg-gradient-to-r={$theme === 'dark'}
-					class:from-transparent={$theme === 'dark'}
-					class:via-[#4ade80]/20={$theme === 'dark'}
-					class:to-transparent={$theme === 'dark'}
-					style={$theme === 'light' ? 'background: linear-gradient(to right, transparent 0%, rgba(5, 150, 105, 0.2) 50%, transparent 100%);' : ''}>
+				<div class="absolute top-0 inset-x-0 h-px"
+					style={$theme === 'dark' ? 'background: linear-gradient(to right, transparent 0%, rgba(74, 222, 128, 0.2) 50%, transparent 100%);' : 'background: linear-gradient(to right, transparent 0%, rgba(5, 150, 105, 0.2) 50%, transparent 100%);'}>
 				</div>
 
 				<div class="relative">
-					<p class="font-mono text-xs mb-4 tracking-widest uppercase transition-colors duration-300"
-						class:text-[#4ade80]/60={$theme === 'dark'}
-						class:text-[#059669]/60={$theme === 'light'}>Open your terminal, then</p>
-					<h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mb-4 transition-colors duration-300"
-						class:text-white={$theme === 'dark'}
-						class:text-gray-900={$theme === 'light'}>
+					<p class="font-mono text-xs mb-4 tracking-widest uppercase transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]/60' : 'text-[#059669]/60'}">Open your terminal, then</p>
+					<h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mb-4 transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">
 						Start brogramming.
 					</h2>
-					<p class="text-sm mb-8 max-w-sm mx-auto transition-colors duration-300"
-						class:text-gray-500={$theme === 'dark'}
-						class:text-gray-600={$theme === 'light'}>
+					<p class="text-sm mb-8 max-w-sm mx-auto transition-colors duration-300 {$theme === 'dark' ? 'text-gray-500' : 'text-gray-600'}">
 						No waitlist. No setup fee. Create a room in seconds and invite your whole team.
 					</p>
 					<a
 						href="https://start.brogramming.io"
-						class="group inline-flex items-center gap-2 font-semibold text-sm px-7 py-3.5 rounded-lg transition-all duration-200"
-						class:bg-[#4ade80]={$theme === 'dark'}
-						class:text-black={$theme === 'dark'}
-						class:hover:bg-[#86efac]={$theme === 'dark'}
-						class:bg-[#059669]={$theme === 'light'}
-						class:text-white={$theme === 'light'}
-						class:hover:bg-[#047857]={$theme === 'light'}
+						class="group inline-flex items-center gap-2 font-semibold text-sm px-7 py-3.5 rounded-lg transition-all duration-200 {$theme === 'dark' ? 'bg-[#4ade80] text-black hover:bg-[#86efac]' : 'bg-[#059669] text-white hover:bg-[#047857]'}"
 					>
 						Start Brogramming
 						<span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
@@ -428,15 +287,9 @@
 </main>
 
 <!-- ─── Footer ─── -->
-<footer class="border-t px-6 py-8 transition-colors duration-300"
-	class:border-white/[0.04]={$theme === 'dark'}
-	class:border-gray-200={$theme === 'light'}>
+<footer class="border-t px-6 py-8 transition-colors duration-300 {$theme === 'dark' ? 'border-white/[0.04]' : 'border-gray-200'}">
 	<div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-		<span class="font-mono text-sm font-medium tracking-tight transition-colors duration-300"
-			class:text-white={$theme === 'dark'}
-			class:text-gray-900={$theme === 'light'}>brogramming</span>
-		<p class="text-xs transition-colors duration-300"
-			class:text-gray-600={$theme === 'dark'}
-			class:text-gray-500={$theme === 'light'}>© 2026 Brogramming. Code together.</p>
+		<span class="font-mono text-sm font-medium tracking-tight transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">brogramming</span>
+		<p class="text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">© 2026 Brogramming. Code together.</p>
 	</div>
 </footer>

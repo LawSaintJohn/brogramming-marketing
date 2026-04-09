@@ -82,13 +82,11 @@
 			</div>
 
 			<h1 class="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-[1.05] text-white mb-6">
-				Code together.<br />
-				<span class="text-[#4ade80]">AI included.</span>
+				Brogrammers Brogramming <span class="text-[#4ade80]">Brogramming.</span>
 			</h1>
 
 			<p class="text-base sm:text-lg text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
-				A multiplayer code editor where every developer brings their own AI.
-				Claude, GPT, Gemini — your model, your key, one shared canvas.
+				How much clearer could we be?
 			</p>
 
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-3">

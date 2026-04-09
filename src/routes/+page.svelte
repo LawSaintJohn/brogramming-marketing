@@ -76,7 +76,7 @@
 
 		<div class="relative z-10 text-center max-w-3xl mx-auto">
 			<!-- eyebrow -->
-			<div class="inline-flex items-center gap-2 text-xs font-mono text-[#4ade80]/70 border border-[#4ade80]/20 rounded-full px-3 py-1 mb-8 bg-[#4ade80]/[0.04]">
+			<div class="inline-flex items-center gap-2 text-xs font-mono text-[#4ade80]/70 rounded-full px-3 py-1 mb-8 bg-[#4ade80]/[0.04]">
 				<span class="w-1.5 h-1.5 rounded-full bg-[#4ade80] animate-pulse"></span>
 				Real-time · AI-native · CRDT-powered
 			</div>

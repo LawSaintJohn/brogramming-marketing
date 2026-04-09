@@ -111,12 +111,9 @@
 			<!-- eyebrow -->
 			<div class="inline-flex items-center gap-2 text-xs font-mono rounded-full px-3 py-1 mb-8 transition-all duration-300"
 				class:text-[#4ade80]/70={$theme === 'dark'}
-				class:border-[#4ade80]/20={$theme === 'dark'}
 				class:bg-[#4ade80]/[0.04]={$theme === 'dark'}
 				class:text-[#059669]/70={$theme === 'light'}
-				class:border-[#059669]/30={$theme === 'light'}
-				class:bg-[#059669]/[0.08]={$theme === 'light'}
-				style="border: 1px solid;">
+				class:bg-[#059669]/[0.08]={$theme === 'light'}>
 				<span class="w-1.5 h-1.5 rounded-full animate-pulse"
 					class:bg-[#4ade80]={$theme === 'dark'}
 					class:bg-[#059669]={$theme === 'light'}></span>

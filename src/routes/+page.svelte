@@ -55,7 +55,7 @@
 			href="https://start.brogramming.io"
 			class="text-xs font-medium text-[#4ade80] border border-[#4ade80]/30 px-3 py-1.5 rounded-md hover:bg-[#4ade80]/10 transition-colors duration-200"
 		>
-			Start coding →
+			Start Brogramming →
 		</a>
 	</div>
 </header>

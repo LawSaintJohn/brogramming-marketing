@@ -52,7 +52,7 @@
 	<div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
 		<span class="font-mono text-sm font-medium tracking-tight text-white">brogramming</span>
 		<a
-			href="https://start.brogramming.com"
+			href="https://start.brogramming.io"
 			class="text-xs font-medium text-[#4ade80] border border-[#4ade80]/30 px-3 py-1.5 rounded-md hover:bg-[#4ade80]/10 transition-colors duration-200"
 		>
 			Start coding →
@@ -93,7 +93,7 @@
 
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-3">
 				<a
-					href="https://start.brogramming.com"
+					href="https://start.brogramming.io"
 					class="group inline-flex items-center gap-2 bg-[#4ade80] text-black font-semibold text-sm px-6 py-3 rounded-lg hover:bg-[#86efac] transition-colors duration-200"
 				>
 					Start Brogramming
@@ -240,7 +240,7 @@
 						No waitlist. No setup fee. Create a room in seconds and invite your whole team.
 					</p>
 					<a
-						href="https://start.brogramming.com"
+						href="https://start.brogramming.io"
 						class="group inline-flex items-center gap-2 bg-[#4ade80] text-black font-semibold text-sm px-7 py-3.5 rounded-lg hover:bg-[#86efac] transition-colors duration-200"
 					>
 						Start Brogramming

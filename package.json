@@ -15,5 +15,8 @@
     "svelte": "^5.55.2",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.7"
+  },
+  "dependencies": {
+    "phosphor-icons": "^1.4.2"
   }
 }

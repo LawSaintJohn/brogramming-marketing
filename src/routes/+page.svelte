@@ -214,6 +214,182 @@
 		</div>
 	</section>
 
+	<!-- ─── Live Video & Audio Chat ─── -->
+	<section class="py-28 px-6 border-t transition-colors duration-300 {$theme === 'dark' ? 'border-white/[0.04]' : 'border-gray-200'}">
+		<div class="max-w-5xl mx-auto">
+			<div class="grid lg:grid-cols-2 gap-16 items-center">
+				<div>
+					<p class="font-mono text-xs mb-3 tracking-widest uppercase transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]/60' : 'text-[#059669]/60'}">Live communication</p>
+					<h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mb-6 transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">
+						Bro to bro, <span class="{$theme === 'dark' ? 'text-[#4ade80]' : 'text-[#059669]'}">face to face</span>
+					</h2>
+					<p class="text-base leading-relaxed mb-8 transition-colors duration-300 {$theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}">
+						Why type when you can talk? Built-in video and audio chat means you can see your bro's reaction when the AI suggests something brilliant (or questionable). Debug together, brainstorm live, and celebrate those "aha!" moments in real-time.
+					</p>
+					<div class="space-y-4">
+						<div class="flex items-start gap-3">
+							<div class="w-6 h-6 rounded-full border flex items-center justify-center mt-0.5 transition-all duration-300 {$theme === 'dark' ? 'bg-[#4ade80]/10 border-[#4ade80]/30 text-[#4ade80]' : 'bg-[#059669]/10 border-[#059669]/30 text-[#059669]'}">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M23 7l-7 5 7 5V7z"/>
+									<rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-sm font-semibold mb-1 transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">HD video calls</h3>
+								<p class="text-sm transition-colors duration-300 {$theme === 'dark' ? 'text-gray-500' : 'text-gray-600'}">Crystal-clear video chat integrated right into your coding session</p>
+							</div>
+						</div>
+						<div class="flex items-start gap-3">
+							<div class="w-6 h-6 rounded-full border flex items-center justify-center mt-0.5 transition-all duration-300 {$theme === 'dark' ? 'bg-[#4ade80]/10 border-[#4ade80]/30 text-[#4ade80]' : 'bg-[#059669]/10 border-[#059669]/30 text-[#059669]'}">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+									<path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+									<line x1="12" y1="19" x2="12" y2="23"/>
+									<line x1="8" y1="23" x2="16" y2="23"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-sm font-semibold mb-1 transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">Spatial audio</h3>
+								<p class="text-sm transition-colors duration-300 {$theme === 'dark' ? 'text-gray-500' : 'text-gray-600'}">High-quality audio that adapts to your team size and setup</p>
+							</div>
+						</div>
+						<div class="flex items-start gap-3">
+							<div class="w-6 h-6 rounded-full border flex items-center justify-center mt-0.5 transition-all duration-300 {$theme === 'dark' ? 'bg-[#4ade80]/10 border-[#4ade80]/30 text-[#4ade80]' : 'bg-[#059669]/10 border-[#059669]/30 text-[#059669]'}">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<circle cx="12" cy="12" r="3"/>
+									<path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-sm font-semibold mb-1 transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">Smart controls</h3>
+								<p class="text-sm transition-colors duration-300 {$theme === 'dark' ? 'text-gray-500' : 'text-gray-600'}">Push-to-talk, auto-mute, and noise cancellation built-in</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="relative">
+					<!-- Video chat mockup -->
+					<div class="relative rounded-2xl border overflow-hidden shadow-2xl transition-all duration-300 {$theme === 'dark' ? 'border-white/[0.06] bg-[#111111] shadow-black/60' : 'border-gray-300 bg-white shadow-gray-900/20'}">
+						<!-- Header -->
+						<div class="flex items-center justify-between px-4 py-3 border-b transition-all duration-300 {$theme === 'dark' ? 'border-white/[0.05] bg-[#0d0d0d]' : 'border-gray-200 bg-gray-50'}">
+							<div class="flex items-center gap-2">
+								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]' : 'text-[#059669]'}">
+									<path d="M23 7l-7 5 7 5V7z"/>
+									<rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+								</svg>
+								<span class="font-mono text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">room-a3f9b2</span>
+							</div>
+							<div class="flex items-center gap-1">
+								<span class="w-1.5 h-1.5 rounded-full {$theme === 'dark' ? 'bg-[#4ade80]' : 'bg-[#059669]'}"></span>
+								<span class="font-mono text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]/60' : 'text-[#059669]/60'}">Live</span>
+							</div>
+						</div>
+
+						<!-- Video grid -->
+						<div class="p-4">
+							<div class="grid grid-cols-2 gap-3">
+								<!-- Participant 1 -->
+								<div class="relative aspect-video rounded-lg overflow-hidden transition-all duration-300 {$theme === 'dark' ? 'bg-gradient-to-br from-gray-800 to-gray-900' : 'bg-gradient-to-br from-gray-100 to-gray-200'}">
+									<div class="absolute inset-0 flex items-center justify-center">
+										<div class="w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-300 {$theme === 'dark' ? 'bg-[#4ade80]/20 border-[#4ade80] text-[#4ade80]' : 'bg-[#059669]/20 border-[#059669] text-[#059669]'}">
+											<span class="font-mono text-xs font-semibold">A</span>
+										</div>
+									</div>
+									<div class="absolute bottom-2 left-2 px-2 py-1 rounded text-[10px] font-mono transition-all duration-300 {$theme === 'dark' ? 'bg-black/60 text-white' : 'bg-white/80 text-gray-900'}">alice</div>
+									<div class="absolute top-2 right-2 w-4 h-4 rounded-full border flex items-center justify-center transition-all duration-300 {$theme === 'dark' ? 'bg-[#4ade80]/20 border-[#4ade80]' : 'bg-[#059669]/20 border-[#059669]'}">
+										<svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" class="transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]' : 'text-[#059669]'}">
+											<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+											<path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+										</svg>
+									</div>
+								</div>
+
+								<!-- Participant 2 -->
+								<div class="relative aspect-video rounded-lg overflow-hidden transition-all duration-300 {$theme === 'dark' ? 'bg-gradient-to-br from-blue-900/50 to-blue-800/50' : 'bg-gradient-to-br from-blue-100 to-blue-200'}">
+									<div class="absolute inset-0 flex items-center justify-center">
+										<div class="w-12 h-12 rounded-full border-2 flex items-center justify-center bg-blue-400/20 border-blue-400 text-blue-400">
+											<span class="font-mono text-xs font-semibold">B</span>
+										</div>
+									</div>
+									<div class="absolute bottom-2 left-2 px-2 py-1 rounded text-[10px] font-mono transition-all duration-300 {$theme === 'dark' ? 'bg-black/60 text-white' : 'bg-white/80 text-gray-900'}">bob</div>
+									<div class="absolute top-2 right-2 w-4 h-4 rounded-full border flex items-center justify-center bg-blue-400/20 border-blue-400">
+										<svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" class="text-blue-400">
+											<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+											<path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+										</svg>
+									</div>
+								</div>
+
+								<!-- Participant 3 -->
+								<div class="relative aspect-video rounded-lg overflow-hidden transition-all duration-300 {$theme === 'dark' ? 'bg-gradient-to-br from-violet-900/50 to-violet-800/50' : 'bg-gradient-to-br from-violet-100 to-violet-200'}">
+									<div class="absolute inset-0 flex items-center justify-center">
+										<div class="w-12 h-12 rounded-full border-2 flex items-center justify-center bg-violet-400/20 border-violet-400 text-violet-400">
+											<span class="font-mono text-xs font-semibold">C</span>
+										</div>
+									</div>
+									<div class="absolute bottom-2 left-2 px-2 py-1 rounded text-[10px] font-mono transition-all duration-300 {$theme === 'dark' ? 'bg-black/60 text-white' : 'bg-white/80 text-gray-900'}">carol</div>
+									<div class="absolute top-2 right-2 w-4 h-4 rounded-full border flex items-center justify-center opacity-50 transition-all duration-300 {$theme === 'dark' ? 'bg-red-400/20 border-red-400' : 'bg-red-500/20 border-red-500'}">
+										<svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" class="transition-colors duration-300 {$theme === 'dark' ? 'text-red-400' : 'text-red-500'}">
+											<path d="M1 1l22 22M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"/>
+											<path d="M17 16.95A7 7 0 0 1 5 12v-2"/>
+										</svg>
+									</div>
+								</div>
+
+								<!-- You (empty for "your" view) -->
+								<div class="relative aspect-video rounded-lg overflow-hidden border-2 border-dashed transition-all duration-300 {$theme === 'dark' ? 'border-gray-700 bg-gray-900/50' : 'border-gray-300 bg-gray-100'}">
+									<div class="absolute inset-0 flex items-center justify-center">
+										<div class="text-center">
+											<div class="w-8 h-8 rounded-full border flex items-center justify-center mx-auto mb-1 transition-all duration-300 {$theme === 'dark' ? 'border-gray-600 text-gray-600' : 'border-gray-400 text-gray-400'}">
+												<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+													<path d="M23 7l-7 5 7 5V7z"/>
+													<rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+												</svg>
+											</div>
+											<span class="text-[10px] font-mono transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">you</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Controls -->
+						<div class="flex items-center justify-center gap-3 px-4 py-3 border-t transition-all duration-300 {$theme === 'dark' ? 'border-white/[0.05] bg-[#0d0d0d]' : 'border-gray-200 bg-gray-50'}">
+							<button class="w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 {$theme === 'dark' ? 'bg-[#4ade80]/10 border-[#4ade80]/30 text-[#4ade80] hover:bg-[#4ade80]/20' : 'bg-[#059669]/10 border-[#059669]/30 text-[#059669] hover:bg-[#059669]/20'}">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+									<path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+								</svg>
+							</button>
+							<button class="w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 {$theme === 'dark' ? 'bg-[#4ade80]/10 border-[#4ade80]/30 text-[#4ade80] hover:bg-[#4ade80]/20' : 'bg-[#059669]/10 border-[#059669]/30 text-[#059669] hover:bg-[#059669]/20'}">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M23 7l-7 5 7 5V7z"/>
+									<rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+								</svg>
+							</button>
+							<button class="w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 {$theme === 'dark' ? 'bg-red-500/10 border-red-500/30 text-red-400 hover:bg-red-500/20' : 'bg-red-500/10 border-red-500/30 text-red-600 hover:bg-red-500/20'}">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M21 6H3l1.5 15h15L21 6zM10 11v6M14 11v6"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+
+					<!-- Floating chat bubble -->
+					<div class="absolute -bottom-4 -right-4 rounded-lg border shadow-xl p-3 max-w-[180px] transition-all duration-300 {$theme === 'dark' ? 'border-white/[0.06] bg-[#111111] shadow-black/40' : 'border-gray-300 bg-white shadow-gray-900/20'}"
+						style="backdrop-filter: blur(8px);">
+						<div class="flex items-center gap-2 mb-1">
+							<span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+							<span class="font-mono text-[10px] transition-colors duration-300 {$theme === 'dark' ? 'text-blue-300' : 'text-blue-600'}">bob</span>
+						</div>
+						<p class="text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}">"This AI suggestion is actually fire 🔥"</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- ─── Features ─── -->
 	<section id="features" class="py-28 px-6 border-t transition-colors duration-300 {$theme === 'dark' ? 'border-white/[0.04]' : 'border-gray-200'}">
 		<div class="max-w-5xl mx-auto">

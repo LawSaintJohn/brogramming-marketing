@@ -108,11 +108,13 @@ body::before {
 	justify-content: center;
 	font-size: 10px;
 	line-height: 1;
+	filter: brightness(0) invert(1); /* Make moon white in dark mode */
 }
 
 [data-theme="light"] .theme-toggle::after {
 	background: var(--color-green-light);
 	transform: translateX(24px);
+	filter: brightness(0); /* Make moon black in light mode */
 }
 
 /* Light mode component overrides */

@@ -42,7 +42,7 @@
 </script>
 
 <svelte:head>
-	<title>Brogramming — Code together. AI included.</title>
+	<title>brogramming — Code together. AI included.</title>
 	<meta name="description" content="Real-time collaborative coding where every developer brings their own AI. Yjs-powered sync, multiplayer cursors, no lock-in." />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -68,7 +68,7 @@
 				class="text-xs font-medium px-3 py-1.5 rounded-md transition-all duration-200 {$theme === 'dark' ? 'text-[#4ade80] border-[#4ade80]/30 hover:bg-[#4ade80]/10' : 'text-[#059669] border-[#059669]/30 hover:bg-[#059669]/10'}"
 				style="border: 1px solid;"
 			>
-				Start Brogramming →
+				Start brogramming →
 			</a>
 		</div>
 	</div>
@@ -101,7 +101,7 @@
 			</div>
 
 			<h1 class="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-[1.05] mb-6 transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">
-				Brogrammers Brogramming <span class="{$theme === 'dark' ? 'text-[#4ade80]' : 'text-[#059669]'}">Brogramming.</span>
+				brogrammers brogramming <span class="{$theme === 'dark' ? 'text-[#4ade80]' : 'text-[#059669]'}">brogramming.</span>
 			</h1>
 
 			<p class="text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed transition-colors duration-300 {$theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}">
@@ -113,7 +113,7 @@
 					href="https://start.brogramming.io"
 					class="group inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-200 {$theme === 'dark' ? 'bg-[#4ade80] text-black hover:bg-[#86efac]' : 'bg-[#059669] text-white hover:bg-[#047857]'}"
 				>
-					Start Brogramming
+					Start brogramming
 					<span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
 				</a>
 				<a
@@ -277,7 +277,7 @@
 						href="https://start.brogramming.io"
 						class="group inline-flex items-center gap-2 font-semibold text-sm px-7 py-3.5 rounded-lg transition-all duration-200 {$theme === 'dark' ? 'bg-[#4ade80] text-black hover:bg-[#86efac]' : 'bg-[#059669] text-white hover:bg-[#047857]'}"
 					>
-						Start Brogramming
+						Start brogramming
 						<span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
 					</a>
 				</div>
@@ -290,6 +290,6 @@
 <footer class="border-t px-6 py-8 transition-colors duration-300 {$theme === 'dark' ? 'border-white/[0.04]' : 'border-gray-200'}">
 	<div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
 		<span class="font-mono text-sm font-medium tracking-tight transition-colors duration-300 {$theme === 'dark' ? 'text-white' : 'text-gray-900'}">brogramming</span>
-		<p class="text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">© 2026 Brogramming. Code together.</p>
+		<p class="text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">© 2026 brogramming. Code together.</p>
 	</div>
 </footer>

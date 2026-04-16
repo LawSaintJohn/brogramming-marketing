@@ -68,8 +68,8 @@
 				class="text-xs font-medium px-3 py-1.5 rounded-md transition-all duration-200 {$theme === 'dark' ? 'text-[#4ade80] border-[#4ade80]/30 hover:bg-[#4ade80]/10' : 'text-[#059669] border-[#059669]/30 hover:bg-[#059669]/10'}"
 				style="border: 1px solid;"
 			>
-				Start brogramming →
-			</a>
+				Ready, Set, Bro →
+</a>
 		</div>
 	</div>
 </header>
@@ -113,7 +113,7 @@
 					href="https://start.brogramming.io"
 					class="group inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-200 {$theme === 'dark' ? 'bg-[#4ade80] text-black hover:bg-[#86efac]' : 'bg-[#059669] text-white hover:bg-[#047857]'}"
 				>
-					Start brogramming
+					Ready, Set, Bro
 					<span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
 				</a>
 				<a
@@ -453,7 +453,7 @@
 						href="https://start.brogramming.io"
 						class="group inline-flex items-center gap-2 font-semibold text-sm px-7 py-3.5 rounded-lg transition-all duration-200 {$theme === 'dark' ? 'bg-[#4ade80] text-black hover:bg-[#86efac]' : 'bg-[#059669] text-white hover:bg-[#047857]'}"
 					>
-						Start brogramming
+						Ready, Set, Bro
 						<span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
 					</a>
 				</div>

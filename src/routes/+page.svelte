@@ -1,5 +1,6 @@
 <script>
 	import { theme } from '$lib/theme.js';
+	import HeroMockup from '$lib/HeroMockup.svelte';
 
 	const steps = [
 		{
@@ -125,66 +126,9 @@
 			</div>
 		</div>
 
-		<!-- Terminal mockup -->
-		<div class="relative z-10 mt-20 w-full max-w-2xl mx-auto">
-			<div class="rounded-xl border overflow-hidden shadow-2xl transition-all duration-300 {$theme === 'dark' ? 'border-white/[0.06] bg-[#111111]/80 shadow-black/60' : 'border-gray-300 bg-white/90 shadow-gray-900/20'}"
-				style="backdrop-filter: blur(12px);">
-				<!-- Title bar -->
-				<div class="flex items-center gap-1.5 px-4 py-3 border-b transition-all duration-300 {$theme === 'dark' ? 'border-white/[0.05] bg-[#0d0d0d]' : 'border-gray-200 bg-gray-50'}">
-					<div class="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"></div>
-					<div class="w-2.5 h-2.5 rounded-full bg-[#febc2e]"></div>
-					<div class="w-2.5 h-2.5 rounded-full bg-[#28c840]"></div>
-					<span class="ml-3 font-mono text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">session://room-a3f9b2</span>
-					<div class="ml-auto flex items-center gap-2">
-						<span class="w-1.5 h-1.5 rounded-full {$theme === 'dark' ? 'bg-[#4ade80]' : 'bg-[#059669]'}"></span>
-						<span class="font-mono text-xs transition-colors duration-300 {$theme === 'dark' ? 'text-[#4ade80]/60' : 'text-[#059669]/60'}">3 connected</span>
-					</div>
-				</div>
-				<!-- Code lines -->
-				<div class="px-5 py-5 font-mono text-xs sm:text-sm leading-7 text-left overflow-hidden">
-					<div class="flex gap-4">
-						<div class="select-none text-right w-4 shrink-0 leading-7 transition-colors duration-300 {$theme === 'dark' ? 'text-gray-700' : 'text-gray-400'}">
-							{#each [1,2,3,4,5,6,7] as n}
-								<div>{n}</div>
-							{/each}
-						</div>
-						<div class="overflow-x-auto transition-colors duration-300">
-							{#if $theme === 'dark'}
-								<div><span class="text-purple-400">async function</span> <span class="text-blue-300">buildTogether</span><span class="text-gray-400">(</span><span class="text-orange-300">session</span><span class="text-gray-400">) {`{`}</span></div>
-								<div class="pl-4"><span class="text-purple-400">const</span> <span class="text-blue-200">room</span> <span class="text-gray-400">= await</span> <span class="text-blue-300">session.join</span><span class="text-gray-400">(</span><span class="text-green-300">'room-a3f9b2'</span><span class="text-gray-400">);</span></div>
-								<div class="pl-4"><span class="text-purple-400">const</span> <span class="text-blue-200">ai</span> <span class="text-gray-400">= new</span> <span class="text-blue-300">BringYourOwnAI</span><span class="text-gray-400">({`{`}</span> <span class="text-blue-200">apiKey</span><span class="text-gray-400">: process.env.</span><span class="text-orange-300">CLAUDE_KEY</span> <span class="text-gray-400"> {`}`});</span></div>
-								<div class="pl-4 text-gray-600">&nbsp;</div>
-								<div class="pl-4"><span class="text-gray-500">// real-time sync via Yjs CRDTs</span></div>
-								<div class="pl-4"><span class="text-purple-400">return</span> <span class="text-blue-300">room.collaborate</span><span class="text-gray-400">({`{`}</span> <span class="text-blue-200">ai</span><span class="text-gray-400">, </span><span class="text-blue-200">cursors</span><span class="text-gray-400">: true {`}`});</span></div>
-								<div><span class="text-gray-400">{`}`}</span></div>
-							{:else}
-								<div><span class="text-purple-600">async function</span> <span class="text-blue-600">buildTogether</span><span class="text-gray-600">(</span><span class="text-orange-600">session</span><span class="text-gray-600">) {`{`}</span></div>
-								<div class="pl-4"><span class="text-purple-600">const</span> <span class="text-blue-700">room</span> <span class="text-gray-600">= await</span> <span class="text-blue-600">session.join</span><span class="text-gray-600">(</span><span class="text-green-600">'room-a3f9b2'</span><span class="text-gray-600">);</span></div>
-								<div class="pl-4"><span class="text-purple-600">const</span> <span class="text-blue-700">ai</span> <span class="text-gray-600">= new</span> <span class="text-blue-600">BringYourOwnAI</span><span class="text-gray-600">({`{`}</span> <span class="text-blue-700">apiKey</span><span class="text-gray-600">: process.env.</span><span class="text-orange-600">CLAUDE_KEY</span> <span class="text-gray-600"> {`}`});</span></div>
-								<div class="pl-4 text-gray-400">&nbsp;</div>
-								<div class="pl-4"><span class="text-gray-500">// real-time sync via Yjs CRDTs</span></div>
-								<div class="pl-4"><span class="text-purple-600">return</span> <span class="text-blue-600">room.collaborate</span><span class="text-gray-600">({`{`}</span> <span class="text-blue-700">ai</span><span class="text-gray-600">, </span><span class="text-blue-700">cursors</span><span class="text-gray-600">: true {`}`});</span></div>
-								<div><span class="text-gray-600">{`}`}</span></div>
-							{/if}
-						</div>
-					</div>
-					<!-- Cursor indicators -->
-					<div class="mt-4 pt-4 border-t flex items-center gap-3 transition-colors duration-300 {$theme === 'dark' ? 'border-white/[0.04]' : 'border-gray-200'}">
-						<div class="flex items-center gap-1.5">
-							<span class="w-2 h-2 rounded-full {$theme === 'dark' ? 'bg-[#4ade80]' : 'bg-[#059669]'}"></span>
-							<span class="text-[10px] font-mono transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">@alice · Claude</span>
-						</div>
-						<div class="flex items-center gap-1.5">
-							<span class="w-2 h-2 rounded-full bg-blue-400"></span>
-							<span class="text-[10px] font-mono transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">@bob · GPT-4o</span>
-						</div>
-						<div class="flex items-center gap-1.5">
-							<span class="w-2 h-2 rounded-full bg-violet-400"></span>
-							<span class="text-[10px] font-mono transition-colors duration-300 {$theme === 'dark' ? 'text-gray-600' : 'text-gray-500'}">@carol · Gemini</span>
-						</div>
-					</div>
-				</div>
-			</div>
+		<!-- Editor mockup -->
+		<div class="relative z-10 mt-20 w-full max-w-3xl mx-auto">
+			<HeroMockup />
 		</div>
 	</section>
 

@@ -160,22 +160,22 @@
 
 				<!-- Alice cursor: hero section -->
 				<div class="absolute pointer-events-none" style="top:68px; left:165px;">
-					<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 1px 3px rgba(0,0,0,0.6));">
+					<div class="absolute px-2 py-0.5 rounded text-[10px] font-bold text-black whitespace-nowrap"
+						style="top:14px; left:12px; background:#4ade80; font-family:ui-sans-serif,system-ui,sans-serif;">@alice</div>
+					<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:relative; z-index:1; filter:drop-shadow(0 1px 3px rgba(0,0,0,0.6));">
 						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" fill="#4ade80"/>
 						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" stroke="rgba(0,0,0,0.3)" stroke-width="0.75"/>
 					</svg>
-					<div class="absolute top-4 left-4 px-2 py-0.5 rounded text-[10px] font-bold text-black whitespace-nowrap"
-						style="background:#4ade80; font-family:ui-sans-serif,system-ui,sans-serif;">@alice</div>
 				</div>
 
 				<!-- Bob cursor: cards row -->
 				<div class="absolute pointer-events-none" style="bottom:44px; left:96px;">
-					<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 1px 3px rgba(0,0,0,0.6));">
+					<div class="absolute px-2 py-0.5 rounded text-[10px] font-bold text-black whitespace-nowrap"
+						style="top:14px; left:12px; background:#60a5fa; font-family:ui-sans-serif,system-ui,sans-serif;">@bob</div>
+					<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:relative; z-index:1; filter:drop-shadow(0 1px 3px rgba(0,0,0,0.6));">
 						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" fill="#60a5fa"/>
 						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" stroke="rgba(0,0,0,0.3)" stroke-width="0.75"/>
 					</svg>
-					<div class="absolute top-4 left-4 px-2 py-0.5 rounded text-[10px] font-bold text-black whitespace-nowrap"
-						style="background:#60a5fa; font-family:ui-sans-serif,system-ui,sans-serif;">@bob</div>
 				</div>
 			</div>
 

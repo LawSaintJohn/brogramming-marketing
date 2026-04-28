@@ -127,7 +127,7 @@
 		</div>
 
 		<!-- Editor mockup -->
-		<div class="relative z-10 mt-20 w-full max-w-3xl mx-auto">
+		<div class="relative z-10 mt-20 w-full max-w-4xl mx-auto">
 			<HeroMockup />
 		</div>
 	</section>

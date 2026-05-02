@@ -1,34 +1,46 @@
 @import "tailwindcss";
 
 @theme {
-	/* Dark theme (default) */
-	--color-bg: #0a0a0a;
-	--color-surface: #111111;
-	--color-surface-2: #161616;
-	--color-border: #1f1f1f;
-	--color-green: #4ade80;
-	--color-green-dim: #22c55e40;
-	--color-muted: #6b7280;
-	--color-subtle: #374151;
-	--color-text: #e5e7eb;
-	--color-text-muted: #9ca3af;
-	--color-text-subtle: #6b7280;
-	
-	/* Light theme */
-	--color-bg-light: #ffffff;
-	--color-surface-light: #f8fafc;
-	--color-surface-2-light: #f1f5f9;
-	--color-border-light: #e2e8f0;
-	--color-green-light: #059669;
-	--color-green-dim-light: #05966940;
-	--color-muted-light: #64748b;
-	--color-subtle-light: #cbd5e1;
-	--color-text-light: #0f172a;
-	--color-text-muted-light: #475569;
-	--color-text-subtle-light: #94a3b8;
-	
-	--font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
-	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+	/* ── Dark canvas (default) ── */
+	--color-void:      #08090b;
+	--color-bg:        #0d0e11;
+	--color-surface:   #14161b;
+	--color-surface-2: #1c1f26;
+	--color-surface-3: #252932;
+	--color-border:    rgba(255,255,255,0.06);
+	--color-border-2:  rgba(255,255,255,0.12);
+
+	/* ── Text ── */
+	--color-text:       #f4f4f5;
+	--color-text-soft:  #d4d4d8;
+	--color-text-muted: #a1a1aa;
+	--color-text-dim:   #71717a;
+
+	/* ── Brand: acid lime ── */
+	--color-bro:      #c8ff3c;
+	--color-bro-deep: #8fcc1f;
+	--color-bro-glow: rgba(200,255,60,0.35);
+
+	/* ── Accent colors ── */
+	--color-fire:    #ff5722;
+	--color-cyan:    #4dd6ff;
+	--color-magenta: #ff4dc4;
+
+	/* ── Light theme overrides ── */
+	--color-bg-light:        #f8f8f5;
+	--color-surface-light:   #ffffff;
+	--color-surface-2-light: #f0f0ec;
+	--color-border-light:    rgba(0,0,0,0.08);
+	--color-border-2-light:  rgba(0,0,0,0.14);
+	--color-text-light:       #0f0f0e;
+	--color-text-soft-light:  #2a2a28;
+	--color-text-muted-light: #5a5a58;
+	--color-text-dim-light:   #8a8a88;
+	--color-bro-light:        #5e8c00;  /* dark lime for contrast on light */
+	--color-bro-deep-light:   #4a7000;
+
+	--font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+	--font-sans: 'Geist', system-ui, -apple-system, sans-serif;
 }
 
 :root {
@@ -45,52 +57,60 @@ html {
 
 body {
 	background-color: var(--color-bg);
-	color: var(--color-text);
+	color: var(--color-text-soft);
 	font-family: var(--font-sans);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Light mode styles */
+/* ── Light mode body ── */
 [data-theme="light"] body {
 	background-color: var(--color-bg-light);
-	color: var(--color-text-light);
+	color: var(--color-text-soft-light);
 }
 
-/* Grain overlay */
+/* ── Dot-grid background ── */
 body::before {
 	content: '';
 	position: fixed;
 	inset: 0;
-	z-index: 9999;
+	z-index: 0;
 	pointer-events: none;
-	opacity: 0.035;
-	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-	background-repeat: repeat;
-	background-size: 128px 128px;
+	background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+	background-size: 28px 28px;
+	background-position: 0 0;
+	mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
 }
 
 [data-theme="light"] body::before {
-	opacity: 0.02;
-	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+	background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px);
 }
 
-/* Theme toggle button */
+/* ── Text selection ── */
+::selection {
+	background: var(--color-bro);
+	color: var(--color-void);
+}
+
+/* ── Theme toggle ── */
 .theme-toggle {
 	position: relative;
 	width: 48px;
 	height: 24px;
-	background: var(--color-green);
-	border: 1px solid var(--color-green);
+	background: var(--color-bro);
+	border: 1px solid var(--color-bro-deep);
 	border-radius: 4px;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	box-shadow: 0 0 12px rgba(200,255,60,0.15);
 }
 
 [data-theme="light"] .theme-toggle {
-	background: var(--color-green-light);
-	border-color: var(--color-green-light);
+	background: var(--color-bro-light);
+	border-color: var(--color-bro-deep-light);
+	box-shadow: none;
 }
 
 .theme-toggle::after {
@@ -100,15 +120,10 @@ body::before {
 	left: 2px;
 	width: 18px;
 	height: 18px;
-	background-color: black;
+	background-color: var(--color-void);
 	border-radius: 2px;
 	transition: transform 0.3s ease;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 10px;
-	line-height: 1;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ffffff' viewBox='0 0 256 256'%3E%3Cpath d='M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56a104.11,104.11,0,0,0,104,104,106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z'%3E%3C/path%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23c8ff3c' viewBox='0 0 256 256'%3E%3Cpath d='M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23Z'%3E%3C/path%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 12px 12px;
@@ -117,46 +132,17 @@ body::before {
 [data-theme="light"] .theme-toggle::after {
 	transform: translateX(24px);
 	background-color: white;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56a104.11,104.11,0,0,0,104,104,106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z'%3E%3C/path%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%234a7000' viewBox='0 0 256 256'%3E%3Cpath d='M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23Z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-/* Light mode component overrides */
-[data-theme="light"] .bg-surface {
-	background-color: var(--color-surface-light) !important;
+/* ── Pulse animation ── */
+@keyframes pulse-dot {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.4; }
 }
 
-[data-theme="light"] .bg-surface-2 {
-	background-color: var(--color-surface-2-light) !important;
-}
-
-[data-theme="light"] .border-light {
-	border-color: var(--color-border-light) !important;
-}
-
-[data-theme="light"] .text-light {
-	color: var(--color-text-light) !important;
-}
-
-[data-theme="light"] .text-muted-light {
-	color: var(--color-text-muted-light) !important;
-}
-
-[data-theme="light"] .text-subtle-light {
-	color: var(--color-green-light) !important;
-}
-
-[data-theme="light"] .green-light {
-	color: var(--color-green-light) !important;
-}
-
-[data-theme="light"] .bg-green-light {
-	background-color: var(--color-green-light) !important;
-}
-
-[data-theme="light"] .border-green-light {
-	border-color: var(--color-green-light) !important;
-}
-
-[data-theme="light"] .bg-green-dim-light {
-	background-color: var(--color-green-dim-light) !important;
+/* ── Blink animation ── */
+@keyframes blink {
+	0%, 49% { opacity: 1; }
+	50%, 100% { opacity: 0; }
 }

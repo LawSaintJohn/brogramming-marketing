@@ -6,17 +6,17 @@
 <div
 	class="w-full rounded-xl overflow-hidden select-none text-[11px] transition-all duration-300"
 	style="
-		font-family: ui-sans-serif, system-ui, sans-serif;
+		font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
 		border: 1px solid {dk('rgba(255,255,255,0.07)', 'rgba(0,0,0,0.10)')};
 		box-shadow: 0 40px 100px {dk('rgba(0,0,0,0.75)', 'rgba(0,0,0,0.18)')};
-		background: {dk('#0e0e0e', '#f5f5f5')};
+		background: {dk('#14161b', '#f5f5f5')};
 	"
 >
 
 	<!-- ══ App bar ══ -->
 	<div
 		class="flex items-center justify-between px-4 shrink-0 border-b"
-		style="height:38px; background:{dk('#0a0a0a','#ebebeb')}; border-color:{dk('rgba(255,255,255,0.06)','rgba(0,0,0,0.09)')};"
+		style="height:38px; background:{dk('#08090b','#ebebeb')}; border-color:{dk('rgba(255,255,255,0.06)','rgba(0,0,0,0.09)')};"
 	>
 		<div class="flex items-center gap-3">
 			<div class="flex gap-1.5">
@@ -24,7 +24,7 @@
 				<div class="w-2.5 h-2.5 rounded-full bg-[#febc2e]"></div>
 				<div class="w-2.5 h-2.5 rounded-full bg-[#28c840]"></div>
 			</div>
-			<span class="font-mono text-[12px] font-medium tracking-tight" style="color:{dk('#e5e7eb','#111')};">brogramming</span>
+			<span class="text-[12px] font-medium tracking-tight" style="font-family:'JetBrains Mono',ui-monospace,monospace; color:{dk('#e5e7eb','#111')};">brogramming<span style="color:#c8ff3c;">.</span></span>
 		</div>
 
 		<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md border text-[10px]"
@@ -36,14 +36,14 @@
 		<div class="flex items-center gap-2">
 			<!-- 2 avatars only -->
 			<div class="flex -space-x-1.5">
-				<div class="w-5 h-5 rounded-full bg-[#4ade80] border-2 flex items-center justify-center text-[8px] font-bold text-black z-20"
-					style="border-color:{dk('#0a0a0a','#ebebeb')};">A</div>
-				<div class="w-5 h-5 rounded-full bg-blue-400 border-2 flex items-center justify-center text-[8px] font-bold text-black z-10"
-					style="border-color:{dk('#0a0a0a','#ebebeb')};">B</div>
+				<div class="w-5 h-5 rounded-full border-2 flex items-center justify-center text-[8px] font-bold text-black z-20"
+					style="background:#c8ff3c; border-color:{dk('#08090b','#ebebeb')};">A</div>
+				<div class="w-5 h-5 rounded-full border-2 flex items-center justify-center text-[8px] font-bold text-black z-10"
+					style="background:#ff4dc4; border-color:{dk('#08090b','#ebebeb')};">B</div>
 			</div>
 			<span class="text-[10px]" style="color:{dk('#4b5563','#9ca3af')};">2 live</span>
 			<div class="ml-2 flex items-center gap-1 px-3 py-1 rounded-md text-[11px] font-semibold"
-				style="background:{dk('#4ade80','#059669')}; color:{dk('#000','#fff')};">
+				style="background:#c8ff3c; color:#000; box-shadow:0 0 10px rgba(200,255,60,0.25);">
 				Ready, Set, Bro →
 			</div>
 		</div>
@@ -54,7 +54,7 @@
 
 		<!-- ── FILES panel ── -->
 		<div class="flex flex-col shrink-0 border-r overflow-hidden"
-			style="width:148px; background:{dk('#0c0c0c','#f0f0f0')}; border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.08)')};">
+			style="width:148px; background:{dk('#0d0e11','#f0f0f0')}; border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.08)')};">
 			<div class="flex items-center justify-between px-3 py-1.5 border-b shrink-0"
 				style="border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.08)')};">
 				<span class="text-[10px] font-semibold tracking-widest uppercase" style="color:{dk('#4b5563','#9ca3af')};">FILES</span>
@@ -65,10 +65,10 @@
 					<svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>package.json
 				</div>
 				<div class="flex items-center gap-1 px-1.5 py-0.5">
-					<svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="{dk('#4ade80','#059669')}" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+					<svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#c8ff3c" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
 					<span style="color:{dk('#d1d5db','#374151')};">src</span>
 				</div>
-				<div class="flex items-center gap-1 pl-5 py-0.5 rounded" style="background:{dk('rgba(74,222,128,0.08)','rgba(5,150,105,0.06)')}; color:{dk('#4ade80','#059669')};">
+				<div class="flex items-center gap-1 pl-5 py-0.5 rounded" style="background:rgba(200,255,60,0.07); color:#c8ff3c;">
 					<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
 					+page.svelte
 				</div>
@@ -94,14 +94,14 @@
 
 			<!-- Browser chrome bar -->
 			<div class="flex items-center gap-2 px-3 shrink-0 border-b"
-				style="height:32px; background:{dk('#0e0e0e','#f5f5f5')}; border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.08)')};">
+				style="height:32px; background:{dk('#14161b','#f5f5f5')}; border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.08)')};">
 				<div class="flex gap-1 shrink-0">
 					<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="{dk('#374151','#9ca3af')}" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
 					<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="{dk('#374151','#9ca3af')}" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
 					<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="{dk('#374151','#9ca3af')}" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
 				</div>
 				<div class="flex-1 flex items-center gap-1.5 rounded px-2.5 text-[10px]"
-					style="height:20px; background:{dk('#1a1a1a','#e8e8e8')}; color:{dk('#4b5563','#9ca3af')};">
+					style="height:20px; background:{dk('#1c1f26','#e8e8e8')}; color:{dk('#4b5563','#9ca3af')};">
 					<svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
 					wanderlust.vercel.app
 				</div>
@@ -161,9 +161,9 @@
 				<!-- Alice cursor: hero section -->
 				<div class="absolute pointer-events-none" style="top:68px; left:165px;">
 					<div class="absolute px-2 py-0.5 rounded text-[10px] font-bold text-black whitespace-nowrap"
-						style="top:14px; left:12px; background:#4ade80; font-family:ui-sans-serif,system-ui,sans-serif;">@alice</div>
+						style="top:14px; left:12px; background:#c8ff3c; font-family:'Geist',ui-sans-serif,system-ui,sans-serif;">@alice</div>
 					<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:relative; z-index:1; filter:drop-shadow(0 1px 3px rgba(0,0,0,0.6));">
-						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" fill="#4ade80"/>
+						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" fill="#c8ff3c"/>
 						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" stroke="rgba(0,0,0,0.3)" stroke-width="0.75"/>
 					</svg>
 				</div>
@@ -171,31 +171,31 @@
 				<!-- Bob cursor: cards row -->
 				<div class="absolute pointer-events-none" style="bottom:44px; left:96px;">
 					<div class="absolute px-2 py-0.5 rounded text-[10px] font-bold text-black whitespace-nowrap"
-						style="top:14px; left:12px; background:#60a5fa; font-family:ui-sans-serif,system-ui,sans-serif;">@bob</div>
+						style="top:14px; left:12px; background:#ff4dc4; font-family:'Geist',ui-sans-serif,system-ui,sans-serif;">@bob</div>
 					<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:relative; z-index:1; filter:drop-shadow(0 1px 3px rgba(0,0,0,0.6));">
-						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" fill="#60a5fa"/>
+						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" fill="#ff4dc4"/>
 						<path d="M0 0L0 14L3.5 10.5L6 16.5L8 15.5L5.5 9.5L10.5 9.5Z" stroke="rgba(0,0,0,0.3)" stroke-width="0.75"/>
 					</svg>
 				</div>
 			</div>
 
 			<!-- Terminal strip -->
-			<div class="flex flex-col shrink-0 border-t overflow-hidden" style="height:64px; background:{dk('#0a0a0a','#f0f0f0')}; border-color:{dk('rgba(255,255,255,0.06)','rgba(0,0,0,0.08)')}; font-family:'JetBrains Mono',ui-monospace,monospace;">
+			<div class="flex flex-col shrink-0 border-t overflow-hidden" style="height:64px; background:{dk('#08090b','#f0f0f0')}; border-color:{dk('rgba(255,255,255,0.06)','rgba(0,0,0,0.08)')}; font-family:'JetBrains Mono',ui-monospace,monospace;">
 				<div class="flex items-center gap-3 px-3 border-b shrink-0" style="height:22px; border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.07)')};">
 					<span class="text-[9px] font-semibold tracking-widest uppercase" style="color:{dk('#4b5563','#9ca3af')};">TERMINAL</span>
 					<span class="text-[9px]" style="color:{dk('#4b5563','#9ca3af')};">file</span>
-					<span class="text-[9px] font-medium" style="color:{dk('#e5e7eb','#111')}; border-bottom:1px solid {dk('#4ade80','#059669')};">terminal</span>
+					<span class="text-[9px] font-medium" style="color:{dk('#e5e7eb','#111')}; border-bottom:1px solid {dk('#c8ff3c','#8fcc1f')};">terminal</span>
 				</div>
 				<div class="px-4 pt-1.5 text-[10px] leading-5" style="color:{dk('#6b7280','#6b7280')};">
-					<div><span style="color:{dk('#4ade80','#059669')};">$</span> npm run dev</div>
-					<div><span style="color:{dk('#4ade80','#059669')};">✓</span> preview live → :5173 <span style="color:{dk('#374151','#9ca3af')};">(proxied)</span></div>
+					<div><span style="color:{dk('#c8ff3c','#5e8c00')};">$</span> npm run dev</div>
+					<div><span style="color:{dk('#c8ff3c','#5e8c00')};">✓</span> preview live → :5173 <span style="color:{dk('#374151','#9ca3af')};">(proxied)</span></div>
 				</div>
 			</div>
 		</div>
 
 		<!-- ── BRO CHAT ── -->
 		<div class="hidden sm:flex flex-col shrink-0 border-l overflow-hidden"
-			style="width:160px; background:{dk('#0c0c0c','#f0f0f0')}; border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.08)')};">
+			style="width:160px; background:{dk('#0d0e11','#f0f0f0')}; border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.08)')};">
 			<div class="flex items-center justify-between px-3 py-1.5 border-b shrink-0"
 				style="border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.08)')};">
 				<span class="text-[10px] font-semibold tracking-widest uppercase" style="color:{dk('#4b5563','#9ca3af')};">BRO CHAT</span>
@@ -203,21 +203,21 @@
 
 			<div class="flex-1 px-3 py-3 flex flex-col gap-3 overflow-hidden">
 				<div class="flex flex-col gap-1">
-					<span class="text-[9px] font-semibold" style="color:#4ade80;">Alice</span>
+					<span class="text-[9px] font-semibold" style="color:#c8ff3c;">Alice</span>
 					<div class="text-[10px] leading-5 rounded-lg px-2 py-1.5"
 						style="background:{dk('rgba(255,255,255,0.04)','rgba(0,0,0,0.05)')}; color:{dk('#d1d5db','#374151')};">
 						hero section looking 🔥
 					</div>
 				</div>
 				<div class="flex flex-col gap-1">
-					<span class="text-[9px] font-semibold" style="color:#60a5fa;">Bob</span>
+					<span class="text-[9px] font-semibold" style="color:#ff4dc4;">Bob</span>
 					<div class="text-[10px] leading-5 rounded-lg px-2 py-1.5"
 						style="background:{dk('rgba(255,255,255,0.04)','rgba(0,0,0,0.05)')}; color:{dk('#d1d5db','#374151')};">
 						fixing cards rn 👀
 					</div>
 				</div>
 				<div class="flex flex-col gap-1">
-					<span class="text-[9px] font-semibold" style="color:#4ade80;">Alice</span>
+					<span class="text-[9px] font-semibold" style="color:#c8ff3c;">Alice</span>
 					<div class="text-[10px] leading-5 rounded-lg px-2 py-1.5"
 						style="background:{dk('rgba(255,255,255,0.04)','rgba(0,0,0,0.05)')}; color:{dk('#d1d5db','#374151')};">
 						Claude agrees 🤖 ship it
@@ -227,7 +227,7 @@
 
 			<div class="border-t px-3 py-2 shrink-0" style="border-color:{dk('rgba(255,255,255,0.05)','rgba(0,0,0,0.08)')};">
 				<div class="rounded-md px-2 py-1.5 text-[10px]"
-					style="background:{dk('#111','#e9e9e9')}; border:1px solid {dk('rgba(255,255,255,0.06)','rgba(0,0,0,0.08)')}; color:{dk('#374151','#9ca3af')};">
+					style="background:{dk('#1c1f26','#e9e9e9')}; border:1px solid {dk('rgba(255,255,255,0.06)','rgba(0,0,0,0.08)')}; color:{dk('#374151','#9ca3af')};">
 					message your bro...
 				</div>
 			</div>
@@ -236,15 +236,15 @@
 
 	<!-- ══ Status bar ══ -->
 	<div class="flex items-center justify-between px-4 border-t shrink-0"
-		style="height:22px; background:{dk('#080808','#e8e8e8')}; border-color:{dk('rgba(255,255,255,0.04)','rgba(0,0,0,0.07)')}; font-family:'JetBrains Mono',ui-monospace,monospace;">
+		style="height:22px; background:{dk('#08090b','#e8e8e8')}; border-color:{dk('rgba(255,255,255,0.04)','rgba(0,0,0,0.07)')}; font-family:'JetBrains Mono',ui-monospace,monospace;">
 		<div class="flex items-center gap-3 text-[9px]" style="color:{dk('#374151','#9ca3af')};">
 			<span>⎇ main</span>
-			<span style="color:{dk('rgba(74,222,128,0.55)','rgba(5,150,105,0.65)')};">✓ synced</span>
+			<span style="color:{dk('rgba(200,255,60,0.6)','rgba(94,140,0,0.7)')};">✓ synced</span>
 		</div>
 		<div class="flex items-center gap-3 text-[9px]" style="color:{dk('#374151','#9ca3af')};">
 			<span>Svelte</span>
-			<span class="flex items-center gap-1" style="color:{dk('rgba(74,222,128,0.55)','rgba(5,150,105,0.65)')};">
-				<span class="w-1 h-1 rounded-full animate-pulse" style="background:{dk('#4ade80','#059669')};"></span>
+			<span class="flex items-center gap-1" style="color:{dk('rgba(200,255,60,0.6)','rgba(94,140,0,0.7)')};">
+				<span class="w-1 h-1 rounded-full animate-pulse" style="background:{dk('#c8ff3c','#5e8c00')};"></span>
 				CRDT live
 			</span>
 		</div>
